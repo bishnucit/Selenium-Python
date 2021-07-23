@@ -1,5 +1,5 @@
-Feature: Test Something
-  Scenario: verify image
+Feature: Login Logout
+  Scenario: Navigate to test site
     Given launch chrome browser
     When open test site
     Then verify that the webpage has some content
@@ -19,6 +19,6 @@ Feature: Test Something
 
   Scenario: Logout from the site after successfully login
     Given open test site
-    When I enter valid username and pas sword
+    When I enter valid username and password
     Then I am successfully logged in
     And I logout and close browser
