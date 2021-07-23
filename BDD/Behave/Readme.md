@@ -1,7 +1,6 @@
 requirement
 
-pip install behave
-pip install selenium
+pip install behave, selenium
 
 
 BDD - Behave - Python - Examples.
