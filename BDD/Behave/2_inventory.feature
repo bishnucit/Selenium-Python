@@ -1,4 +1,5 @@
-Feature: Inventory Manipulation
+#noinspection CucumberUndefinedStep
+Feature: Inventory Manipulation for https://www.saucedemo.com/
 
     Scenario Outline: After login successfully, change display rule for the products
         Given open test site
