@@ -12,12 +12,13 @@ def display_z_to_a(context):
     time.sleep(2)
 
 
-@then(u'I add "{value}" nd product on the list to cart from inventory page')
+@then(u'I add product number "{value}" on the list to cart from inventory page')
 def add_to_cart_product(context, value):
-    # use -> add to cart the 2nd product in the list
+    # use -> add to cart the nth product in the list, if already added don't click
     click_nth_item_add_to_cart = context.driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div["
                                                                       + value + "]/div[2]/div[2]/button")
-    click_nth_item_add_to_cart.click()
+    if click_nth_item_add_to_cart.text != "REMOVE":
+        click_nth_item_add_to_cart.click()
     time.sleep(2)
 
 
@@ -28,3 +29,16 @@ def remove_product_from_cart_page(context):
         find_element_by_xpath("/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/button")
     remove_from_cart_button.click()
     time.sleep(2)
+
+
+@then(u'I can see the count of the cart icon to be "{value}"')
+def get_cart_icon_count(context, value):
+    # use -> remove the product from cart page
+    cart_icon = context.driver.find_element_by_xpath("//*[@id='shopping_cart_container']/a/span")
+    if int(cart_icon.text) == int(value):
+        assert True
+    else:
+        assert False
+    time.sleep(2)
+
+# --no-capture  use no capture to see print statements
