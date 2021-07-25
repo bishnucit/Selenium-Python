@@ -1,4 +1,5 @@
-Feature: Login Logout
+#noinspection CucumberUndefinedStep
+Feature: Login Logout verification for https://www.saucedemo.com/
   Scenario: Navigate to test site
     Given launch chrome browser
     When open test site
@@ -22,3 +23,4 @@ Feature: Login Logout
     When I enter valid username and password
     Then I am successfully logged in
     And I logout and close browser
+    
