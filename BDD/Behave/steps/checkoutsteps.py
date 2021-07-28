@@ -82,10 +82,29 @@ def verify_checkout(context):
 
 
 @then(u'I click on cancel, it takes me to inventory page')
-def step_impl(context):
+def cancel_checkout(context):
     # use -> cancel checkout and goto inventory page
     cancel_button = context.driver.find_element_by_id("cancel")
     cancel_button.click()
     time.sleep(2)
     inventory_page = context.driver.find_element_by_xpath("//*[@id='header_container']/div[2]/span")
     assert inventory_page.is_displayed()
+
+
+@then(u'I click on finish button to complete the checkout')
+def complete_checkout(context):
+    # use -> complete checkout
+    finish_button = context.driver.find_element_by_id("finish")
+    finish_button.click()
+    time.sleep(2)
+
+
+@then(u'I can see the thank you page and i go back to inventory page')
+def thank_you_page_to_home_page(context):
+    # use -> cancel checkout and goto inventory page
+    thank_you_message = context.driver.find_element_by_xpath("//*[@id='header_container']/div[2]/span")
+    assert thank_you_message.is_displayed()
+    time.sleep(2)
+    home_button = context.driver.find_element_by_id("back-to-products")
+    home_button.click()
+    time.sleep(2)
