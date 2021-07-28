@@ -1,0 +1,1530 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Behave Test Report</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <style type="text/css">
+      <!--
+body{font-size:0;color:#fff;margin:0;
+padding:0}.behave,td,th{font:400 11px "Lucida Grande",Helvetica,sans-serif;
+background:#fff;color:#000}.behave #behave-header,td #behave-header,
+th #behave-header{background:#65c400;color:#fff;height:8em}.behave
+#behave-header #expand-collapse p,td #behave-header #expand-collapse
+p,th #behave-header #expand-collapse p{float:right;margin:0 0 0 10px}
+.background h3,.behave .scenario h3,td .scenario h3,th .scenario h3{
+font-size:11px;padding:3px;margin:0;background:#65c400;color:#fff;
+font-weight:700}.background h3{font-size:1.2em;background:#666}.behave
+h1,td h1,th h1{margin:0 10px;padding:10px;font-family:'Lucida Grande',
+Helvetica,sans-serif;font-size:2em;position:absolute}.behave h4,td h4,
+th h4{margin-bottom:2px}.behave div.feature,td div.feature,th div.feature
+{padding:2px;margin:0 10px 5px}.behave div.examples,td div.examples,th
+div.examples{padding:0 0 0 1em}.behave .stats,td .stats,th .stats{margin:2em}
+.behave .summary ul.features li,td .summary ul.features li,th .summary
+ul.features li{display:inline}.behave .step_name,td .step_name,th .step_name
+{float:left}.behave .step_file,td .step_file,th .step_file{text-align:right;
+color:#999}.behave .step_file a,td .step_file a,th .step_file a{color:#999}.behave
+.scenario_file,td .scenario_file,th .scenario_file{float:right;color:#999}.behave
+.tag,td .tag,th .tag{font-weight:700;color:#246ac1}.behave .backtrace,td
+.backtrace,th .backtrace{margin-top:0;margin-bottom:0;margin-left:1em;color:#000}
+.behave a,td a,th a{text-decoration:underline;color:#be5c00;margin-right:0.5em}
+.behave a:hover,td a:hover,th a:hover{text-decoration:none}.behave a:visited,td
+a:visited,th a:visited{font-weight:400}.behave a div.examples,td a div.examples,
+th a div.examples{margin:5px 0 5px 15px;color:#000}.behave .outline table,
+td .outline table,th .outline table{margin:0 0 5px 10px}.behave table,
+td table,th table{border-collapse:collapse}.behave table td,td table td,
+th table td{padding:3px 3px 3px 5px}.behave table td.failed,td table td.failed,
+th table td.failed{border-left:5px solid #c20000;border-bottom:1px solid
+#c20000;background:#fffbd3;color:#c20000}.behave table td.passed,td table
+td.passed,th table td.passed{border-left:5px solid #65c400;border-bottom:1px
+solid #65c400;background:#dbffb4;color:#3d7700}.behave table td.skipped,td
+table td.skipped,th table td.skipped{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011}.behave table td.pending,.behave table
+td.undefined,td table td.pending,td table td.undefined,th table td.pending,th table
+td.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;
+background:#fcfb98;color:#131313}.behave table td.message,td table td.message,th
+table td.message{border-left:5px solid #0ff;border-bottom:1px solid #0ff;
+background:#e0ffff;color:#011}.behave ol,td ol,th ol{list-style:none;
+margin:0;padding:0}.behave ol li.step,td ol li.step,th ol li.step{
+padding:3px 3px 3px 18px;margin:5px 0 5px 5px}.behave ol li,td ol li,th
+ol li{margin:0 0 0 1em;padding:0 0 0 .2em}.behave ol li span.param,td
+ol li span.param,th ol li span.param{font-weight:700}.behave ol li.failed,td
+ol li.failed,th ol li.failed{border-left:5px solid #c20000;border-bottom:1px
+solid #c20000;background:#fffbd3;color:#c20000}.behave ol li.passed,td ol
+li.passed,th ol li.passed{border-left:5px solid #65c400;border-bottom:1px
+solid #65c400;background:#dbffb4;color:#3d7700}.behave ol li.skipped,td ol
+li.skipped,th ol li.skipped{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011}.behave ol li.pending,.behave ol
+li.undefined,td ol li.pending,td ol li.undefined,th ol li.pending,th ol
+li.undefined{border-left:5px solid #faf834;border-bottom:1px solid
+#faf834;background:#fcfb98;color:#131313}.behave ol li.message,td ol
+li.message,th ol li.message{border-left:5px solid #0ff;border-bottom:1px
+solid #0ff;background:#e0ffff;color:#011;margin-left:10px}.behave #summary,td
+#summary,th #summary{margin:0;padding:5px 10px;text-align:right;top:0;
+right:0;float:right}.behave #summary p,td #summary p,th #summary
+p{margin:0 0 0 2px}.behave #summary #totals,td #summary #totals,th
+#summary #totals{font-size:1.2em} h3.failed,#behave-header.failed{background:
+#c40d0d !important} h3.undefined,#behave-header.undefined{background:#faf834
+ !important; color:#000 !important} #behave-header.failed a{color:#fff} pre {
+ white-space: pre-wrap} .step_duration{padding-left:1em}
+-->
+    </style>
+    <script type="text/javascript">
+      <!--
+function Collapsible_toggle(id)
+{
+    var elem = document.getElementById(id);
+    elem.style.display = (elem.style.display == 'none' ? 'block' : 'none');
+    return false;
+}
+
+function Collapsible_expandAll(className)
+{
+    var elems = document.getElementsByClassName(className);
+    for (var i=0; i < elems.length; i++) {
+        elems[i].style.display = 'block';
+    }
+}
+
+function Collapsible_collapseAll(className)
+{
+    var elems = document.getElementsByClassName(className);
+    for (var i=0; i < elems.length; i++) {
+        elems[i].style.display = 'none';
+    }
+}
+
+function Collapsible_expandAllFailed()
+{
+    var elems = document.getElementsByClassName('failed');
+    for (var i=0; i < elems.length; i++) {
+        var elem = elems[i];
+        if (elem.nodeName == 'H3'){
+            elem.parentElement.getElementsByTagName('ol')[0].style.display = 'block';
+        }
+    }
+}
+-->
+    </script>
+  </head>
+  <body>
+    <div class="behave">
+      <div id="behave-header">
+        <div id="label">
+          <h1>Behave Test Report</h1>
+        </div>
+        <div id="summary">
+          <p id="totals">
+            <p id="feature_totals">Features: passed: 4</p>
+            <p id="scenario_totals">Scenarios: passed: 13</p>
+            <p id="step_totals">Steps: passed: 89, untested: 4</p>
+          </p>
+          <p id="duration">Finished in 265.0 seconds</p>
+          <div id="expand-collapse">
+            <a href="#" id="expander" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a>
+            <span> | </span>
+            <a href="#" id="collapser" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a>
+            <span> | </span>
+            <a href="#" id="failed_expander" onclick="Collapsible_expandAllFailed()">Expand All Failed</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature">
+        <h2>
+          <span class="val">Feature: Login Logout verification for https://www.saucedemo.com/</span>
+        </h2>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">1_welcome.feature:3</span>
+        <h3 onclick="Collapsible_toggle('scenario_0')">
+          <span class="val">Scenario: Navigate to test site</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_0">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">launch chrome browser</span>
+              <small class="step_duration">(1.321s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:7</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(1.424s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:13</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">verify that the webpage has some content</span>
+              <small class="step_duration">(0.032s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:25</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">close browser</span>
+              <small class="step_duration">(0.127s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:19</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">1_welcome.feature:9</span>
+        <h3 onclick="Collapsible_toggle('scenario_1')">
+          <span class="val">Scenario: Do a successful login</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_1">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.682s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.298s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I am successfully logged in</span>
+              <small class="step_duration">(1.032s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:52</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">close browser</span>
+              <small class="step_duration">(0.056s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:19</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">1_welcome.feature:15</span>
+        <h3 onclick="Collapsible_toggle('scenario_2')">
+          <span class="val">Scenario: Do an unsuccessful login</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_2">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.773s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter invalid username and password</span>
+              <small class="step_duration">(0.260s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:60</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I can see the error message</span>
+              <small class="step_duration">(1.037s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:73</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">close browser</span>
+              <small class="step_duration">(0.039s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:19</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">1_welcome.feature:21</span>
+        <h3 onclick="Collapsible_toggle('scenario_3')">
+          <span class="val">Scenario: Logout from the site after successfully login</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_3">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(3.482s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.294s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I am successfully logged in</span>
+              <small class="step_duration">(1.039s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:52</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.231s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="feature">
+        <h2>
+          <span class="val">Feature: Inventory Manipulation for https://www.saucedemo.com/</span>
+        </h2>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:12</span>
+        <h3 onclick="Collapsible_toggle('scenario_4')">
+          <span class="val">Scenario Outline: After login successfully, change display rule for the products -- @1.1 TypeList</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_4">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.713s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.289s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I click on the dropdown to select &quot;</span>
+                <b>az</b>
+                <span>&quot; option to see &quot;</span>
+                <b>item_4_title_link</b>
+                <span>&quot; first</span>
+              </span>
+              <small class="step_duration">(2.136s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.191s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:13</span>
+        <h3 onclick="Collapsible_toggle('scenario_5')">
+          <span class="val">Scenario Outline: After login successfully, change display rule for the products -- @1.2 TypeList</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_5">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.503s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.302s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I click on the dropdown to select &quot;</span>
+                <b>za</b>
+                <span>&quot; option to see &quot;</span>
+                <b>item_3_title_link</b>
+                <span>&quot; first</span>
+              </span>
+              <small class="step_duration">(2.145s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.198s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:14</span>
+        <h3 onclick="Collapsible_toggle('scenario_6')">
+          <span class="val">Scenario Outline: After login successfully, change display rule for the products -- @1.3 TypeList</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_6">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(4.530s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.316s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I click on the dropdown to select &quot;</span>
+                <b>lohi</b>
+                <span>&quot; option to see &quot;</span>
+                <b>item_2_title_link</b>
+                <span>&quot; first</span>
+              </span>
+              <small class="step_duration">(2.160s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.338s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:15</span>
+        <h3 onclick="Collapsible_toggle('scenario_7')">
+          <span class="val">Scenario Outline: After login successfully, change display rule for the products -- @1.4 TypeList</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_7">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(3.556s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.291s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I click on the dropdown to select &quot;</span>
+                <b>hilo</b>
+                <span>&quot; option to see &quot;</span>
+                <b>item_5_title_link</b>
+                <span>&quot; first</span>
+              </span>
+              <small class="step_duration">(2.178s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.206s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:17</span>
+        <h3 onclick="Collapsible_toggle('scenario_8')">
+          <span class="val">Scenario: Open product detail page to verify proper navigation</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_8">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(10.611s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.303s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the first product and can see the product detail page</span>
+              <small class="step_duration">(5.074s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:46</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I navigate back to inventory page from product detail page</span>
+              <small class="step_duration">(2.089s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(7.303s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:24</span>
+        <h3 onclick="Collapsible_toggle('scenario_9')">
+          <span class="val">Scenario: Select the lowest product's detail page and add the product to cart</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_9">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.567s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.289s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to low to high</span>
+              <small class="step_duration">(2.054s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:66</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the first product and can see the product detail page</span>
+              <small class="step_duration">(5.072s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:46</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I add the product to cart</span>
+              <small class="step_duration">(2.052s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:84</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I navigate back to inventory page from product detail page</span>
+              <small class="step_duration">(2.068s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(7.318s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:33</span>
+        <h3 onclick="Collapsible_toggle('scenario_10')">
+          <span class="val">Scenario: Select the highest product's detail page and add the product to cart</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_10">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.717s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.312s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to high to low</span>
+              <small class="step_duration">(2.060s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:75</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the first product and can see the product detail page</span>
+              <small class="step_duration">(5.076s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:46</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I add the product to cart</span>
+              <small class="step_duration">(2.059s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:84</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I navigate back to inventory page from product detail page</span>
+              <small class="step_duration">(2.074s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.196s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">2_inventory.feature:42</span>
+        <h3 onclick="Collapsible_toggle('scenario_11')">
+          <span class="val">Scenario: Add the lowest and highest product to cart from product detail page and navigate to cart to verify</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_11">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(3.595s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.290s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to high to low</span>
+              <small class="step_duration">(6.091s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:75</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the first product and can see the product detail page</span>
+              <small class="step_duration">(5.075s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:46</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I add the product to cart</span>
+              <small class="step_duration">(2.060s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:84</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I navigate back to inventory page from product detail page</span>
+              <small class="step_duration">(2.069s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to low to high</span>
+              <small class="step_duration">(2.051s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:66</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the first product and can see the product detail page</span>
+              <small class="step_duration">(5.085s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:46</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I add the product to cart</span>
+              <small class="step_duration">(2.051s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:84</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I navigate back to inventory page from product detail page</span>
+              <small class="step_duration">(2.078s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:58</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the cart button</span>
+              <small class="step_duration">(2.071s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:93</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I verify &quot;</span>
+                <b>2</b>
+                <span>&quot; items are displaying in cart</span>
+              </span>
+              <small class="step_duration">(0.016s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:101</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I go back to inventory page from cart page</span>
+              <small class="step_duration">(2.085s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:113</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.196s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="feature">
+        <h2>
+          <span class="val">Feature: Cart page checks for https://www.saucedemo.com/</span>
+        </h2>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">3_cart.feature:4</span>
+        <h3 onclick="Collapsible_toggle('scenario_12')">
+          <span class="val">Scenario: Set display Z-A and add to cart the 2nd item of the list and then go to cart page and remove the item</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_12">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.674s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.289s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to z to a</span>
+              <small class="step_duration">(2.060s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>2</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.083s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the cart button</span>
+              <small class="step_duration">(2.079s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:93</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I remove the product from cart</span>
+              <small class="step_duration">(2.053s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:25</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I go back to inventory page from cart page</span>
+              <small class="step_duration">(2.087s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:113</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.195s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">3_cart.feature:14</span>
+        <h3 onclick="Collapsible_toggle('scenario_13')">
+          <span class="val">Scenario: Add every 4th item of all display types to cart from inventory page and then verify the number of items</span>
+        </h3>
+        <pre class="message">in the cart page. If an item is already added to cart then it should not add it again.</pre>
+        <ol class="scenario_steps" id="scenario_13">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.798s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.288s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>4</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.061s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to z to a</span>
+              <small class="step_duration">(2.056s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>4</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.063s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to low to high</span>
+              <small class="step_duration">(2.052s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:66</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>4</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.067s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to high to low</span>
+              <small class="step_duration">(4.046s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:75</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>4</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.016s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the cart button</span>
+              <small class="step_duration">(2.080s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:93</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I verify &quot;</span>
+                <b>3</b>
+                <span>&quot; items are displaying in cart</span>
+              </span>
+              <small class="step_duration">(0.024s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:101</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I go back to inventory page from cart page</span>
+              <small class="step_duration">(2.079s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:113</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.178s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">3_cart.feature:30</span>
+        <h3 onclick="Collapsible_toggle('scenario_14')">
+          <span class="val">Scenario: Add 6th product of all types of display option and verify the cart icon count at cart page</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_14">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">open test site</span>
+              <small class="step_duration">(2.733s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:32</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">I enter valid username and password</span>
+              <small class="step_duration">(0.305s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:39</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>6</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.067s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to z to a</span>
+              <small class="step_duration">(2.057s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>6</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.078s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to low to high</span>
+              <small class="step_duration">(2.072s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:66</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>6</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.065s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I change option of display to high to low</span>
+              <small class="step_duration">(2.055s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:75</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I add product number &quot;</span>
+                <b>6</b>
+                <span>&quot; on the list to cart from inventory page</span>
+              </span>
+              <small class="step_duration">(2.074s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:15</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on the cart button</span>
+              <small class="step_duration">(2.082s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:93</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>I can see the count of the cart icon to be &quot;</span>
+                <b>4</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(2.041s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/cartsteps.py:34</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I go back to inventory page from cart page</span>
+              <small class="step_duration">(2.081s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/inventorysteps.py:113</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(3.201s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="feature">
+        <h2>
+          <span class="val">Feature: checkout page checks for https://www.saucedemo.com/</span>
+        </h2>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">4_checkout.feature:15</span>
+        <h3 onclick="Collapsible_toggle('scenario_15')">
+          <span class="val">Scenario: Navigate to checkout page and complete the checkout</span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_15">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">I am at checkout page</span>
+              <small class="step_duration">(21.734s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/checkoutsteps.py:6</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">If i enter First Name, Last name, Zip code and click on Continue button</span>
+              <small class="step_duration">(2.312s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/checkoutsteps.py:62</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I am navigated to finish checkout page</span>
+              <small class="step_duration">(2.025s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/checkoutsteps.py:76</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I click on finish button to complete the checkout</span>
+              <small class="step_duration">(2.092s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/checkoutsteps.py:94</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">I can see the thank you page and i go back to inventory page</span>
+              <small class="step_duration">(4.108s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/checkoutsteps.py:102</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">I logout and close browser</span>
+              <small class="step_duration">(5.203s)</small>
+            </div>
+            <div class="step_file">
+              <span>steps/welcomesteps.py:81</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+    </div>
+  </body>
+</html>
