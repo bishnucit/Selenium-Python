@@ -1,1 +1,6 @@
+username	password	result
+standard_user	secret_sauce	Pass
+noob	ps234abc	Fail
+pro	testa123	Fail
+GG	abc	Fail
 
