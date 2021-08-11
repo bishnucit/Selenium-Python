@@ -82,3 +82,17 @@ root - INFO - ****** Success ******
 08/07/2021 04:33:41 PM - root - INFO - ****** Performing login ******
 08/07/2021 04:33:41 PM - root - INFO - ****** Verifying title ******
 08/07/2021 04:33:41 PM - root - INFO - ****** Success ******
+
+INFO     root:test_inventory.py:22 ****** Test_003_Inventory ******
+INFO     root:test_inventory.py:23 ****** Importing setup ******
+INFO     root:test_inventory.py:31 ****** Login Successful ******
+INFO     root:test_inventory.py:34 ****** Selecting option Name A to Z ******
+INFO     root:test_inventory.py:37 ****** Adding to cart the first item of the list ******
+INFO     root:test_inventory.py:41 ****** Selecting option Name Z to A ******
+INFO     root:test_inventory.py:44 ****** Adding to cart the first item of the list ******
+INFO     root:test_inventory.py:48 ****** Selecting option Price L to H ******
+INFO     root:test_inventory.py:51 ****** Adding to cart the first item of the list ******
+INFO     root:test_inventory.py:55 ****** Selecting option Price H to L ******
+INFO     root:test_inventory.py:58 ****** Adding to cart the first item of the list ******
+INFO     root:test_inventory.py:64 ****** Success ******
+INFO     root:test_inventory.py:72 ****** Logging out ******
