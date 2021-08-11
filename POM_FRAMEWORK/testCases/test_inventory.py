@@ -69,7 +69,7 @@ class Test_003_Inventory:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_add_to_cart.png")
             assert False
 
-        self.logger.error("****** Logging out ******")
+        self.logger.info("****** Logging out ******")
         self.login.clickLogout()
         time.sleep(2)
         self.driver.close()
