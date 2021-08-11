@@ -94,5 +94,5 @@ INFO     root:test_inventory.py:48 ****** Selecting option Price L to H ******
 INFO     root:test_inventory.py:51 ****** Adding to cart the first item of the list ******
 INFO     root:test_inventory.py:55 ****** Selecting option Price H to L ******
 INFO     root:test_inventory.py:58 ****** Adding to cart the first item of the list ******
-INFO     root:test_inventory.py:64 ****** Success ******
+INFO     root:test_inventory.py:64 ****** Success - Count of items matches expected result ******
 INFO     root:test_inventory.py:72 ****** Logging out ******
