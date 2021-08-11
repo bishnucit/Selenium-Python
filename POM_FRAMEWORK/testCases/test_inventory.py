@@ -61,7 +61,7 @@ class Test_003_Inventory:
 
         cart_value = self.inventory.cart_value()
         if cart_value == 4:
-            self.logger.info("****** Success ******")
+            self.logger.info("****** Success - Count of items matches expected result ******")
             assert True
         else:
             self.logger.error("****** Failed - taking screenshot******")
