@@ -76,7 +76,7 @@ class Test_003_Inventory:
         self.driver.close()
 
     @pytest.mark.sanity
-    def test_inventory_contents(self, setup):
+    def test_inventory_contents_AtoZ(self, setup):
 
         self.logger.info("****** Test_003_Inventory ******")
         self.logger.info("****** Importing setup ******")
