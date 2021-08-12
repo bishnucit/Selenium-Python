@@ -8,6 +8,7 @@ from utilities.customLogger import CustomLogger
 from pageObjects.LoginPage import LoginPage
 from utilities import ExcelUtils
 
+
 @pytest.mark.smoke
 class Test_003_Inventory:
     baseURL = ReadConfig.getURL()
@@ -135,45 +136,52 @@ class Test_003_Inventory:
         big_list_six = [str(s) for s in big_list[5]]
 
         if big_list_one == content_one_new:
-            assert True
             self.logger.info("******First Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******First Data fetched from website mismatched with Excel ******")
+            assert False
 
         if big_list_two == content_two_new:
-            assert True
             self.logger.info("******Second Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******Second Data fetched from website mismatched with Excel ******")
+            assert False
 
         if big_list_three == content_three_new:
-            assert True
             self.logger.info("******Third Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******Third Data fetched from website mismatched with Excel ******")
+            assert False
 
         if big_list_four == content_four_new:
-            assert True
             self.logger.info("******Fourth Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******Fourth Data fetched from website mismatched with Excel ******")
+            assert False
 
         if big_list_five == content_five_new:
-            assert True
             self.logger.info("******Fifth Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******Fifth Data fetched from website mismatched with Excel ******")
+            assert False
 
         if big_list_six == content_six_new:
-            assert True
             self.logger.info("******Sixth Data fetched from website matched with Excel ******")
+            assert True
+
         else:
-            assert False
             self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
+            assert False
+
 
         self.driver.close()
