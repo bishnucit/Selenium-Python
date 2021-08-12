@@ -183,5 +183,4 @@ class Test_003_Inventory:
             self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
             assert False
 
-
         self.driver.close()
