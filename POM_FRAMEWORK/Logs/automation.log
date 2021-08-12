@@ -96,3 +96,20 @@ INFO     root:test_inventory.py:55 ****** Selecting option Price H to L ******
 INFO     root:test_inventory.py:58 ****** Adding to cart the first item of the list ******
 INFO     root:test_inventory.py:64 ****** Success - Count of items matches expected result ******
 INFO     root:test_inventory.py:72 ****** Logging out ******
+
+
+INFO     root:test_inventory.py:80 ****** Test_003_Inventory ******
+INFO     root:test_inventory.py:81 ****** Importing setup ******
+INFO     root:test_inventory.py:89 ****** Login Successful ******
+INFO     root:test_inventory.py:92 ****** Selecting option Name A to Z ******
+INFO     root:test_inventory.py:96 ****** Fetching list data ******
+INFO     root:test_inventory.py:109 ****** Fetching from website completed ******
+INFO     root:test_inventory.py:114 ****** Fetching data from Excel file ******
+INFO     root:test_inventory.py:127 ****** Fetching from excel completed ******
+INFO     root:test_inventory.py:129 ****** Cleaning list to convert all to string ******
+INFO     root:test_inventory.py:139 ******First Data fetched from website matched with Excel ******
+INFO     root:test_inventory.py:146 ******Second Data fetched from website matched with Excel ******
+INFO     root:test_inventory.py:153 ******Third Data fetched from website matched with Excel ******
+INFO     root:test_inventory.py:160 ******Fourth Data fetched from website matched with Excel ******
+INFO     root:test_inventory.py:167 ******Fifth Data fetched from website matched with Excel ******
+INFO     root:test_inventory.py:174 ******Sixth Data fetched from website matched with Excel ******
