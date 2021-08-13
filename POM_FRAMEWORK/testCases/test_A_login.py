@@ -5,7 +5,7 @@ from utilities.readProperties import ReadConfig
 from utilities.customLogger import CustomLogger
 
 
-class Test_001_Login:
+class TestLogin001:
     baseURL = ReadConfig.getURL()
     username = ReadConfig.getUname()
     password = ReadConfig.getPass()
@@ -16,7 +16,7 @@ class Test_001_Login:
     @pytest.mark.sanity
     def test_welcome_page(self, setup):
 
-        self.logger.info("****** Test_001_Login ******")
+        self.logger.info("****** TestLogin001_test_welcome_page Started ******")
         self.logger.info("****** Importing setup ******")
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -31,12 +31,13 @@ class Test_001_Login:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_loginTitle.png")
             self.driver.close()
             assert False
+        self.logger.info("****** TestLogin001_test_welcome_page Completed ******")
 
     @pytest.mark.smoke
     @pytest.mark.sanity
     def test_login(self, setup):
 
-        self.logger.info("****** Test_001_Login ******")
+        self.logger.info("****** TestLogin001_test_login Started ******")
         self.logger.info("****** Importing setup ******")
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -56,3 +57,4 @@ class Test_001_Login:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_login.png")
             self.driver.close()
             assert False
+        self.logger.info("****** TestLogin001_test_login Started ******")
