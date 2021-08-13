@@ -57,4 +57,4 @@ class TestLogin001:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_login.png")
             self.driver.close()
             assert False
-        self.logger.info("****** TestLogin001_test_login Started ******")
+        self.logger.info("****** TestLogin001_test_login Completed ******")
