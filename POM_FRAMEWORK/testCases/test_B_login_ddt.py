@@ -8,16 +8,17 @@ from utilities.customLogger import CustomLogger
 from utilities import ExcelUtils
 
 
-class Test_002_Login:
+class TestLogin002:
     baseURL = ReadConfig.getURL()
     path = ".//TestData/LoginData.xlsx"
 
     logger = CustomLogger.customerlogger()
 
     @pytest.mark.ddt
+    @pytest.mark.smoke
     def test_login_ddt(self, setup):
 
-        self.logger.info("****** Test_002_Login ******")
+        self.logger.info("****** TestLogin002 Started ******")
         self.logger.info("****** Importing setup ******")
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -61,10 +62,12 @@ class Test_002_Login:
                     status.append("Fail")
 
         if "Fail" not in status:
-            self.logger.info("****** Loggin DDT Passed ******")
+            self.logger.info("****** Login DDT Passed ******")
             self.driver.close()
             assert True
         else:
-            self.logger.info("****** Loggin DDT Failed ******")
+            self.logger.info("****** Login DDT Failed ******")
             self.driver.close()
             assert False
+        self.logger.info("****** TestLogin002 Completed ******")
+        
