@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 08-Aug-2021 at 10:50:09 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 13-Aug-2021 at 18:08:25 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -265,8 +265,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Website Name</td>
         <td>AUTOMATE THIS</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 36.82 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>8 tests ran in 87.13 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -280,45 +280,166 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_login.py::Test_001_Login::test_welcome_page</td>
-          <td class="col-duration">3.41</td>
+          <td class="col-name">test_A_login.py::TestLogin001::test_welcome_page</td>
+          <td class="col-duration">3.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:19 ****** Test_001_Login ******
-INFO     root:test_login.py:20 ****** Importing setup ******
-INFO     root:test_login.py:24 ****** Verifying title ******
-INFO     root:test_login.py:26 ****** Success ******<br/></div></td></tr></tbody>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_A_login.py:19 ****** TestLogin001_test_welcome_page Started ******
+INFO     root:test_A_login.py:20 ****** Importing setup ******
+INFO     root:test_A_login.py:24 ****** Verifying title ******
+INFO     root:test_A_login.py:26 ****** Success ******
+INFO     root:test_A_login.py:34 ****** TestLogin001_test_welcome_page Completed ******<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_login.py::Test_001_Login::test_login</td>
-          <td class="col-duration">3.13</td>
+          <td class="col-name">test_A_login.py::TestLogin001::test_login</td>
+          <td class="col-duration">3.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:39 ****** Test_001_Login ******
-INFO     root:test_login.py:40 ****** Importing setup ******
-INFO     root:test_login.py:47 ****** Performing login ******
-INFO     root:test_login.py:49 ****** Verifying title ******
-INFO     root:test_login.py:51 ****** Success ******<br/></div></td></tr></tbody>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_A_login.py:40 ****** TestLogin001_test_login Started ******
+INFO     root:test_A_login.py:41 ****** Importing setup ******
+INFO     root:test_A_login.py:48 ****** Performing login ******
+INFO     root:test_A_login.py:50 ****** Verifying title ******
+INFO     root:test_A_login.py:52 ****** Success ******
+INFO     root:test_A_login.py:60 ****** TestLogin001_test_login Started ******<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testCases/test_login_ddt.py::Test_002_Login::test_login_ddt</td>
-          <td class="col-duration">29.85</td>
+          <td class="col-name">test_B_login_ddt.py::TestLogin002::test_login_ddt</td>
+          <td class="col-duration">30.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login_ddt.py:20 ****** Test_002_Login ******
-INFO     root:test_login_ddt.py:21 ****** Importing setup ******
-INFO     root:test_login_ddt.py:39 ****** Performing login ******
-INFO     root:test_login_ddt.py:41 ****** Verifying title ******
-INFO     root:test_login_ddt.py:44 ****** Success ******
-INFO     root:test_login_ddt.py:39 ****** Performing login ******
-INFO     root:test_login_ddt.py:41 ****** Verifying title ******
-INFO     root:test_login_ddt.py:39 ****** Performing login ******
-INFO     root:test_login_ddt.py:41 ****** Verifying title ******
-INFO     root:test_login_ddt.py:39 ****** Performing login ******
-INFO     root:test_login_ddt.py:41 ****** Verifying title ******
-INFO     root:test_login_ddt.py:64 ****** Loggin DDT Passed ******<br/></div></td></tr></tbody></table></body></html>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_B_login_ddt.py:21 ****** TestLogin002 Started ******
+INFO     root:test_B_login_ddt.py:22 ****** Importing setup ******
+INFO     root:test_B_login_ddt.py:40 ****** Performing login ******
+INFO     root:test_B_login_ddt.py:42 ****** Verifying title ******
+INFO     root:test_B_login_ddt.py:45 ****** Success ******
+INFO     root:test_B_login_ddt.py:40 ****** Performing login ******
+INFO     root:test_B_login_ddt.py:42 ****** Verifying title ******
+INFO     root:test_B_login_ddt.py:40 ****** Performing login ******
+INFO     root:test_B_login_ddt.py:42 ****** Verifying title ******
+INFO     root:test_B_login_ddt.py:40 ****** Performing login ******
+INFO     root:test_B_login_ddt.py:42 ****** Verifying title ******
+INFO     root:test_B_login_ddt.py:65 ****** Login DDT Passed ******
+INFO     root:test_B_login_ddt.py:72 ****** TestLogin002 Completed ******<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_C_inventory.py::TestInventory003::test_add_to_cart</td>
+          <td class="col-duration">21.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_C_inventory.py:23 ****** TestInventory003_add_to_cart Started ******
+INFO     root:test_C_inventory.py:24 ****** Importing setup ******
+INFO     root:test_C_inventory.py:32 ****** Login Successful ******
+INFO     root:test_C_inventory.py:35 ****** Selecting option Name A to Z ******
+INFO     root:test_C_inventory.py:38 ****** Adding to cart the first item of the list ******
+INFO     root:test_C_inventory.py:42 ****** Selecting option Name Z to A ******
+INFO     root:test_C_inventory.py:45 ****** Adding to cart the first item of the list ******
+INFO     root:test_C_inventory.py:49 ****** Selecting option Price L to H ******
+INFO     root:test_C_inventory.py:52 ****** Adding to cart the first item of the list ******
+INFO     root:test_C_inventory.py:56 ****** Selecting option Price H to L ******
+INFO     root:test_C_inventory.py:59 ****** Adding to cart the first item of the list ******
+INFO     root:test_C_inventory.py:65 ****** Success - Count of items matches expected result ******
+INFO     root:test_C_inventory.py:73 ****** Logging out ******
+INFO     root:test_C_inventory.py:76 ****** TestInventory003_add_to_cart Completed ******<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_C_inventory.py::TestInventory003::test_inventory_contents_a_to_z</td>
+          <td class="col-duration">6.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_C_inventory.py:82 ****** TestInventory003_contents_AtoZ Started ******
+INFO     root:test_C_inventory.py:83 ****** Importing setup ******
+INFO     root:test_C_inventory.py:91 ****** Login Successful ******
+INFO     root:test_C_inventory.py:94 ****** Selecting option Name A to Z ******
+INFO     root:test_C_inventory.py:98 ****** Fetching list data ******
+INFO     root:test_C_inventory.py:111 ****** Fetching from website completed ******
+INFO     root:test_C_inventory.py:116 ****** Fetching data from Excel file ******
+INFO     root:test_C_inventory.py:129 ****** Fetching from excel completed ******
+INFO     root:test_C_inventory.py:131 ****** Cleaning list to convert all to string ******
+INFO     root:test_C_inventory.py:140 ******First Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:148 ******Second Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:156 ******Third Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:164 ******Fourth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:172 ******Fifth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:180 ******Sixth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:186 ****** TestInventory003_contents_AtoZ Completed ******<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_C_inventory.py::TestInventory003::test_inventory_contents_z_to_a</td>
+          <td class="col-duration">6.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_C_inventory.py:192 ****** TestInventory003_contents_ZtoA Started ******
+INFO     root:test_C_inventory.py:193 ****** Importing setup ******
+INFO     root:test_C_inventory.py:201 ****** Login Successful ******
+INFO     root:test_C_inventory.py:204 ****** Selecting option Name Z to A ******
+INFO     root:test_C_inventory.py:208 ****** Fetching list data ******
+INFO     root:test_C_inventory.py:221 ****** Fetching from website completed ******
+INFO     root:test_C_inventory.py:226 ****** Fetching data from Excel file ******
+INFO     root:test_C_inventory.py:239 ****** Fetching from excel completed ******
+INFO     root:test_C_inventory.py:241 ****** Cleaning list to convert all to string ******
+INFO     root:test_C_inventory.py:250 ******First Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:258 ******Second Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:266 ******Third Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:274 ******Fourth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:282 ******Fifth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:290 ******Sixth Data fetched from website matched with Excel ******
+ERROR    root:test_C_inventory.py:296 ****** TestInventory003_contents_ZtoA Completed ******<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_C_inventory.py::TestInventory003::test_inventory_contents_l_to_h</td>
+          <td class="col-duration">6.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>ERROR    root:test_C_inventory.py:302 ****** TestInventory003_contents_LtoH Started ******
+INFO     root:test_C_inventory.py:303 ****** Importing setup ******
+INFO     root:test_C_inventory.py:311 ****** Login Successful ******
+INFO     root:test_C_inventory.py:314 ****** Selecting option Price L to H ******
+INFO     root:test_C_inventory.py:318 ****** Fetching list data ******
+INFO     root:test_C_inventory.py:331 ****** Fetching from website completed ******
+INFO     root:test_C_inventory.py:336 ****** Fetching data from Excel file ******
+INFO     root:test_C_inventory.py:349 ****** Fetching from excel completed ******
+INFO     root:test_C_inventory.py:351 ****** Cleaning list to convert all to string ******
+INFO     root:test_C_inventory.py:360 ******First Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:368 ******Second Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:376 ******Third Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:384 ******Fourth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:392 ******Fifth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:400 ******Sixth Data fetched from website matched with Excel ******
+ERROR    root:test_C_inventory.py:406 ****** TestInventory003_contents_LtoH Completed ******<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_C_inventory.py::TestInventory003::test_inventory_contents_h_to_l</td>
+          <td class="col-duration">6.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>ERROR    root:test_C_inventory.py:412 ****** TestInventory003_contents_HtoL Started ******
+INFO     root:test_C_inventory.py:413 ****** Importing setup ******
+INFO     root:test_C_inventory.py:421 ****** Login Successful ******
+INFO     root:test_C_inventory.py:424 ****** Selecting option Price H to L ******
+INFO     root:test_C_inventory.py:428 ****** Fetching list data ******
+INFO     root:test_C_inventory.py:441 ****** Fetching from website completed ******
+INFO     root:test_C_inventory.py:446 ****** Fetching data from Excel file ******
+INFO     root:test_C_inventory.py:459 ****** Fetching from excel completed ******
+INFO     root:test_C_inventory.py:461 ****** Cleaning list to convert all to string ******
+INFO     root:test_C_inventory.py:470 ******First Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:478 ******Second Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:486 ******Third Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:494 ******Fourth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:502 ******Fifth Data fetched from website matched with Excel ******
+INFO     root:test_C_inventory.py:510 ******Sixth Data fetched from website matched with Excel ******
+ERROR    root:test_C_inventory.py:516 ****** TestInventory003_contents_HtoL Completed ******<br/></div></td></tr></tbody></table></body></html>
