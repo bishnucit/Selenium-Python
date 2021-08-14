@@ -1,3 +1,6 @@
+import time
+
+
 class InventoryPage:
 
     option_selectAtoZ_xpath = "//*[@id='header_container']/div[2]/div[2]/span/select/option[1]"
@@ -58,6 +61,10 @@ class InventoryPage:
     def cart_value(self):
         value = self.driver.find_element_by_xpath(self.cart_icon_xpath).text
         return int(value)
+
+    def navigate_to_checkout(self):
+        self.driver.find_element_by_xpath(self.cart_icon_xpath).click()
+        time.sleep(2)
 
     def first_item_contents(self):
         item_one = []
