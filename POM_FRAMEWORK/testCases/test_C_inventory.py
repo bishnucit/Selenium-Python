@@ -137,52 +137,59 @@ class TestInventory003:
         big_list_six = [str(s) for s in big_list[5]]
 
         if big_list_one == content_one_new:
-            self.logger.info("******First Data fetched from website matched with Excel ******")
+            self.logger.info("****** First Data fetched from website matched with Excel ******")
             assert True
 
         else:
-            self.logger.error("******First Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** First Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z1.png")
             # assert False
 
         if big_list_two == content_two_new:
-            self.logger.info("******Second Data fetched from website matched with Excel ******")
+            self.logger.info("****** Second Data fetched from website matched with Excel ******")
             assert True
 
         else:
-            self.logger.error("******Second Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** Second Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z2.png")
             # assert False
 
         if big_list_three == content_three_new:
-            self.logger.info("******Third Data fetched from website matched with Excel ******")
+            self.logger.info("****** Third Data fetched from website matched with Excel ******")
             assert True
 
         else:
-            self.logger.error("******Third Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** Third Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z3.png")
             # assert False
 
         if big_list_four == content_four_new:
-            self.logger.info("******Fourth Data fetched from website matched with Excel ******")
+            self.logger.info("****** Fourth Data fetched from website matched with Excel ******")
             assert True
 
         else:
-            self.logger.error("******Fourth Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** Fourth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z4.png")
             # assert False
 
         if big_list_five == content_five_new:
-            self.logger.info("******Fifth Data fetched from website matched with Excel ******")
+            self.logger.info("****** Fifth Data fetched from website matched with Excel ******")
             # assert True
 
         else:
-            self.logger.error("******Fifth Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** Fifth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z5.png")
             # assert False
 
         if big_list_six == content_six_new:
-            self.logger.info("******Sixth Data fetched from website matched with Excel ******")
+            self.logger.info("****** Sixth Data fetched from website matched with Excel ******")
             assert True
 
         else:
-            self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
+            self.logger.error("****** Sixth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_a_to_z6.png")
             # assert False
+
         self.logger.info("****** TestInventory003_contents_AtoZ Completed ******")
         self.driver.close()
 
@@ -252,6 +259,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******First Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a1.png")
             # assert False
 
         if big_list_two == content_two_new:
@@ -260,6 +268,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Second Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a2.png")
             # assert False
 
         if big_list_three == content_three_new:
@@ -268,6 +277,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Third Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a3.png")
             # assert False
 
         if big_list_four == content_four_new:
@@ -276,6 +286,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fourth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a4.png")
             # assert False
 
         if big_list_five == content_five_new:
@@ -284,6 +295,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fifth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a5.png")
             # assert False
 
         if big_list_six == content_six_new:
@@ -292,7 +304,9 @@ class TestInventory003:
 
         else:
             self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_z_to_a6.png")
             # assert False
+
         self.logger.error("****** TestInventory003_contents_ZtoA Completed ******")
         self.driver.close()
 
@@ -362,6 +376,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******First Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h1.png")
             # assert False
 
         if big_list_two == content_two_new:
@@ -370,6 +385,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Second Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h2.png")
             # assert False
 
         if big_list_three == content_three_new:
@@ -378,6 +394,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Third Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h3.png")
             # assert False
 
         if big_list_four == content_four_new:
@@ -386,6 +403,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fourth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h4.png")
             # assert False
 
         if big_list_five == content_five_new:
@@ -394,6 +412,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fifth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h5.png")
             # assert False
 
         if big_list_six == content_six_new:
@@ -402,7 +421,9 @@ class TestInventory003:
 
         else:
             self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_l_to_h6.png")
             # assert False
+
         self.logger.error("****** TestInventory003_contents_LtoH Completed ******")
         self.driver.close()
 
@@ -472,6 +493,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******First Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l1.png")
             # assert False
 
         if big_list_two == content_two_new:
@@ -480,6 +502,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Second Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l2.png")
             # assert False
 
         if big_list_three == content_three_new:
@@ -488,6 +511,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Third Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l3.png")
             # assert False
 
         if big_list_four == content_four_new:
@@ -496,6 +520,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fourth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l4.png")
             # assert False
 
         if big_list_five == content_five_new:
@@ -504,6 +529,7 @@ class TestInventory003:
 
         else:
             self.logger.error("******Fifth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l5.png")
             # assert False
 
         if big_list_six == content_six_new:
@@ -512,7 +538,8 @@ class TestInventory003:
 
         else:
             self.logger.error("******Sixth Data fetched from website mismatched with Excel ******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_inventory_contents_h_to_l6.png")
             # assert False
+
         self.logger.error("****** TestInventory003_contents_HtoL Completed ******")
         self.driver.close()
-        
